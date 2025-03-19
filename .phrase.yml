@@ -1,0 +1,29 @@
+<code>
+
+phrase:
+
+  project_id: df9014814bc8b52293c8baab4e05defa
+
+  file_format: yml
+
+  push:
+
+    sources:
+
+    - file: ./config/locales/.yml
+
+      params:
+
+        file_format: yml
+
+  pull:
+
+    targets:
+
+    - file: ./config/locales/;.yml
+
+      params:
+
+        file_format: yml
+
+</code>
