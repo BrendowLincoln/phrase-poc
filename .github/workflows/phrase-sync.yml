@@ -22,8 +22,8 @@ jobs:
 
       - name: Commit e Push das mudanças
         run: |
-          git config --global user.email "seu-email@example.com"
-          git config --global user.name "Seu Nome"
+          git config --global user.email "lincolbrendow@gmail.com"
+          git config --global user.name "Brendow Lincoln"
           git add locales/
           git commit -m "Atualizando traduções do Phrase" || echo "Nenhuma mudança para commitar"
           git push origin main
