@@ -1,0 +1,18 @@
+pt:
+  common:
+    hello: "Olá"
+    goodbye: "Adeus"
+    yes: "Sim"
+    no: "Não"
+  auth:
+    login: "Entrar"
+    logout: "Sair"
+    register: "Registrar-se"
+    forgot_password: "Esqueceu sua senha?"
+  errors:
+    not_found: "Página não encontrada"
+    forbidden: "Acesso negado"
+    server_error: "Erro interno do servidor"
+  home:
+    welcome: "Bem-vindo ao nosso site!"
+    description: "Uma plataforma incrível para facilitar sua vida."
