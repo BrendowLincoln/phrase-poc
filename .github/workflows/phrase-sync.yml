@@ -1,0 +1,29 @@
+name: Sync Phrase Translations
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Instalar o Phrase CLI
+        run: curl -fsSL https://github.com/phrase/phrase-cli/releases/latest/download/phrase-cli-linux-amd64 -o /usr/local/bin/phrase && chmod +x /usr/local/bin/phrase
+
+      - name: Fazer o Pull das traduções do Phrase
+        run: phrase pull
+        env:
+          PHRASE_ACCESS_TOKEN: ${{ secrets.PHRASE_ACCESS_TOKEN }}
+
+      - name: Commit e Push das mudanças
+        run: |
+          git config --global user.email "seu-email@example.com"
+          git config --global user.name "Seu Nome"
+          git add locales/
+          git commit -m "Atualizando traduções do Phrase" || echo "Nenhuma mudança para commitar"
+          git push origin main
