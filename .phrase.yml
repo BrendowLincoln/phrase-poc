@@ -1,5 +1,5 @@
 phrase:
-  access_token: ${{ secrets.PHRASE_ACCESS_TOKEN }}
+  access_token: "0c5d4106ec95e1371e2837ed773dc22a81f1eae964acc3fe8bf2d7348d35ef47"
   project_id: "df9014814bc8b52293c8baab4e05defa"
   git:
     repository_url: "git@github.com:BrendowLincoln/phrase-poc.git"
